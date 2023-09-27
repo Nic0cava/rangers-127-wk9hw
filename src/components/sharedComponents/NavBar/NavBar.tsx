@@ -20,6 +20,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import { signOut, getAuth } from 'firebase/auth'
 
 
@@ -119,8 +120,8 @@ export const NavBar = () => {
             onClick: () => {navigate('/')}
         },
         {
-            text: myAuth === 'true' ? 'Shop' : 'Sign In',
-            icon: myAuth === 'true' ? <ShoppingBagIcon /> : <AssignmentIndIcon />,
+            text: myAuth === 'true' ? 'Inventory' : 'Sign In',
+            icon: myAuth === 'true' ? <DirectionsCarIcon /> : <AssignmentIndIcon />,
             onClick: () => {navigate(myAuth === 'true' ? '/shop' : '/auth')}
         },
         {

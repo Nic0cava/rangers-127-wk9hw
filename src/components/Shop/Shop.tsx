@@ -1,4 +1,4 @@
-import * as React  from 'react'; 
+import * as _React  from 'react'; 
 import { useState }  from 'react';
 import {
     Box,
@@ -98,7 +98,7 @@ export const shopStyles = {
 }
 
 
-interface SubmitState {
+export interface SubmitState {
     quantity: string
 }
 
@@ -176,7 +176,7 @@ const AddToCart = (cart: CartProps) => {
 
 
 export const Shop = () => {
-    const { shopData, getData } = useGetShop(); 
+    const { shopData} = useGetShop(); 
     const [ currentShop, setCurrentShop ] = useState<ShopState>();
     const [ cartOpen, setCartOpen ] = useState(false);
 
